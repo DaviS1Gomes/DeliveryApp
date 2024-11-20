@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react' //6.9k (gzipped:2.7k)
-import { featured } from '../constants'
-import { themeColors } from '../theme';
+import { featured } from '../constants/Colors.ts'
+import { themeColors } from '../app/(tabs)/themeColors.js';
 import * as Icon from "react-native-feather";
 import { useNavigation } from 'expo-router';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -30,7 +30,7 @@ export default function CartScreen() {
       
       <View style={{backgroundColor: themeColors.bgColor(0.2)}}
         className="flex-row px-4 items-center">
-          <Image source={require('../assets/images/bikeGuy.png')} className="w-20 h-20 rounded-full" />
+          {/*<Image source={require('../assets/images/bikeGuy.png')} className="w-20 h-20 rounded-full" />*/}
           <Text className="flex-1 pl-4">Deliver in 20-30 minutes</Text>
           <TouchableOpacity>
             <Text className="font-bold" style={{color: themeColors.text}}>
@@ -46,7 +46,7 @@ export default function CartScreen() {
           className="bg-white pt-5"
       >
         {
-            restaurant.dishes.map((dish, index)=>{
+           /* restaurant.dishes.map((dish, index)=>{
               return (
                 <View key={index}
                   className="flex-row items-center space-x-3 px-4 bg-white rounded-3xl mx-2 mb-3 shadow-md"></View>
@@ -63,7 +63,7 @@ export default function CartScreen() {
                       <Icon.Minus strokeWidth={2} height={20} width={20} stroke="white" />
                     </TouchableOpacity> 
                 )
-            })
+            })*/
         }
         </ScrollView>
         <View style={{backgroundColor: themeColors.bgColor(0.2)}} className="p-6 px-8 rounded-t-3xl space-y-4">

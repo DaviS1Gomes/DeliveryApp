@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import * as Icon from "react-native-feather";
 import { themeColors } from "../app/(tabs)/themeColors";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function HomeScreen() {
   return (
@@ -22,6 +23,28 @@ export default function HomeScreen() {
             <Icon.Sliders style={styles.iconSlider}/>
           </View>
         </View>
+
+    <ScrollView 
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle= {styles.contentContainerStyle}
+    >
+      <Categories / >
+
+      <View className="mt-5">
+        {
+          [featured, featured, featured].map((item, index) => {{
+            return(
+              <FeaturedRow 
+                key={index}
+                title={item.title}
+                restaurants={item.restaurants}
+                description = {item.description}
+              />
+            )
+          }})
+        }
+      </View>
+    </ScrollView>
 
 
     </SafeAreaView>
@@ -50,5 +73,9 @@ const styles = StyleSheet.create({
     width: 20,
     strokeWidth: 2.5,
     stroke: "#fff"
+  },
+  contentContainerStyle: {
+    paddingBottom: 20,
   }
+
 });

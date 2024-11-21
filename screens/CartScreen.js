@@ -3,8 +3,8 @@ import React from 'react' //6.9k (gzipped:2.7k)
 import { featured } from '../constants/Colors.ts'
 import { themeColors } from '../app/(tabs)/themeColors.js';
 import * as Icon from "react-native-feather";
-import { useNavigation } from 'expo-router';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 
 
@@ -81,7 +81,7 @@ export default function CartScreen() {
             </View>  
             <View>
               <TouchableOpacity
-                onPress={()=> navigation.navigate('OrderPrepairing')}
+                onPress={()=> navigation.navigate('OrderPrepairingScreen')}
                 style={{backgroundColor: themeColors.bgColor(1)}}
                 className="p-3 rounded-full"
                 >

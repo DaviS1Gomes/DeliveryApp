@@ -1,6 +1,6 @@
 import {View, Text} from 'react-native'
 import React, { useEffect } from 'react'
-import { useNavigation } from 'expo-router';
+import { useNavigation } from '@react-navigation/native';
 
 export default function DeliveryScreen()  {
     const restaurant = featured.restaurant[0];

@@ -5,7 +5,7 @@ export default function OrderPrepairingScreen()  {
     useEffect(()=>{
         setTimeout(()=>{
             // move to delivery screen
-            Navigation.navigate('Delivery');
+            Navigation.navigate('DeliveryScreen');
         }, 3000)
 
     }, [])
